@@ -1,0 +1,23 @@
+{
+  "schema": "evidence-manifest/v1",
+  "recorded_test_date": "2026-09-17",
+  "publication_date": "2026-10-07",
+  "note": "Historical evidence. Not a current Gemini deployment test.",
+  "files": [
+    {
+      "path": "workaround/gemini-attachment-menu-fix.user.js",
+      "bytes": 8062,
+      "sha256": "eb22a96507f79059d7b7ea0a1b0a5b4ff4f63523d02fb1a48c63089753cb4fb7"
+    },
+    {
+      "path": "repro/angular-merged70730-repro.mjs",
+      "bytes": 3383,
+      "sha256": "74d0acbda324d83320e0c469cc6ca161a8f96c81838aad939f2d8ad28993eec5"
+    },
+    {
+      "path": "evidence/angular-merged70730-results.jsonl",
+      "bytes": 2943,
+      "sha256": "2e9519eb4c85dbca7e83292c6256b5c1341867c5fad507b48f7597b0043f045f"
+    }
+  ]
+}

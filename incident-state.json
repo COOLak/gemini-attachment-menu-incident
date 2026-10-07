@@ -1,0 +1,40 @@
+{
+  "schema": "incident-state/v1",
+  "incident": "Gemini empty attachment menu in an existing conversation",
+  "updated": "2026-10-07",
+  "status": "historical_failure_documented_current_unpatched_status_unverified",
+  "current_unpatched_gemini_result": null,
+  "last_verified_web_workaround_test": "2026-09-17",
+  "environment": "Gemini standalone Safari web app on macOS",
+  "workaround": {
+    "version": "1.2.0",
+    "official_fix": false,
+    "historical_focused_checks_passed": 25,
+    "sha256": "eb22a96507f79059d7b7ea0a1b0a5b4ff4f63523d02fb1a48c63089753cb4fb7"
+  },
+  "upstream": {
+    "checked_at": "2026-10-07T14:14:38Z",
+    "issue": "https://github.com/angular/angular/issues/70728",
+    "issue_state": "closed",
+    "issue_state_reason": "completed",
+    "pr": "https://github.com/angular/angular/pull/70730",
+    "pr_merged": true,
+    "pr_head": "d8645885bb5167df04732333774a8610f95550e2",
+    "merge_commit": "9486df5e26388e975dfc222902505c2e864636ef",
+    "remaining_failure_followup": "https://github.com/angular/angular/issues/70728#issuecomment-5721025628"
+  },
+  "source_reproduction": {
+    "date": "2026-09-17",
+    "observations": 18,
+    "normal_controls_drained": 6,
+    "error_cases_stalled": 12,
+    "scope": "Three pinned historical revisions; not current Gemini deployment"
+  },
+  "reported_population": {
+    "investigated_cases": 1,
+    "independent_matching_report_count": null,
+    "prevalence_estimate": null
+  },
+  "resolution_verified": false,
+  "private_material_published": false
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gemini's empty attachment menu — public incident tracker</title>
+<meta name="description" content="A documented Gemini web failure linked legacy Deep Research citation rendering to a stranded scheduler. Evidence, local workaround, upstream follow-up, and verification limits.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gemini's empty attachment menu">
+<meta property="og:description" content="Historical failure reproduced. Local workaround available. Current unpatched status unverified. Read the evidence and upstream follow-up.">
+<link rel="stylesheet" href="site.css">
+</head>
+<body><main>
+<nav class="nav" aria-label="Main navigation">
+<a href="#evidence">Evidence</a><a href="#mechanism">Technical finding</a><a href="#status">Current status</a><a href="#reports">Other reports</a><a href="https://github.com/COOLak/gemini-attachment-menu-incident">Repository</a>
+</nav>
+<header>
+<p class="kicker">Gemini web · public incident tracker · updated October 7, 2026</p>
+<h1>An old citation crashed.<br>The attachment menu stopped loading.</h1>
+<p class="lede">In an existing Gemini conversation, the attachment menu opened as an empty shell. The September investigation traced the failure to a legacy Deep Research citation and a stalled deferred-work queue. A narrow local workaround restored attachments.</p>
+<div class="pills"><span class="pill status">Current unpatched status unverified</span><span class="pill">Historical failure reproduced</span><span class="pill">Local workaround v1.2.0</span></div>
+</header>
+<section class="panel warning" id="status">
+<h2>Has Google fixed it?</h2>
+<p><strong>We do not have a verified answer for the current build.</strong> The original Safari web-app environment still needs a fresh test with the workaround disabled before page load. The last recorded live comparison is September 17.</p>
+<p>Angular merged a related change and closed its issue, but a post-merge reproduction demonstrated remaining failure at the merge and both backports. That result does not establish what Gemini serves today.</p>
+<p><a href="https://github.com/angular/angular/issues/70728#issuecomment-5721025628">Read the post-merge follow-up</a> · <a href="https://github.com/COOLak/gemini-attachment-menu-incident/blob/main/resolution.md">Resolution criteria</a></p>
+</section>
+<section aria-label="Recorded evidence at a glance" class="grid" id="evidence">
+<div class="card"><h3>Workaround checks</h3><div class="metric">25 passed</div><p>Focused offline checks recorded September 17, plus fresh loads in the affected conversation.</p></div>
+<div class="card"><h3>Pinned scheduler tests</h3><div class="metric">12 stalled</div><p>Twelve error cases stalled across three revisions. All six no-error controls drained normally.</p></div>
+<div class="card"><h3>Investigated cases</h3><div class="metric">1 case</div><p>This is a documented investigation. Independent matching-report and affected-user totals are unknown.</p></div>
+</section>
+<section class="panel" id="mechanism">
+<h2>How a citation could break an unrelated menu</h2>
+<div class="flow">
+<div><strong>Empty converted cards</strong><p>Legacy <code>DEEP_RESEARCH</code> sources produced no converted citation cards in the inspected frontend.</p></div>
+<div><strong>A rendering exception</strong><p>A template attempted to read the absent first card. An exception interrupted scheduled work.</p></div>
+<div><strong>A stranded queue</strong><p>An expired callback handle remained set. Later work, including menu loading, was left waiting.</p></div>
+</div>
+<p>The Angular scheduler failure also reproduces without a Gemini account, browser, or AdGuard. The Gemini rendering finding is specific to the inspected September environment.</p>
+<p><a href="https://github.com/COOLak/gemini-attachment-menu-incident/blob/main/technical-analysis.md">Technical analysis and reproduction instructions →</a></p>
+</section>
+<section class="panel">
+<h2>What was tested, and when</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Test</th><th scope="col">Recorded result</th><th scope="col">Limit</th></tr></thead>
+<tbody>
+<tr><td>Safari web app<br>September 17</td><td>Empty menu without the revised workaround; menu and harmless unsent attachment worked with v1.2.0.</td><td>Historical result in the original affected conversation.</td></tr>
+<tr><td>Native Android app<br>September 17</td><td>The same conversation opened its attachment menu and Files picker.</td><td>Android success does not settle the web failure.</td></tr>
+<tr><td>Angular merge + backports<br>September 17</td><td>Fresh work stalled after a callback or application-tick exception in both scheduler modes.</td><td>Three pinned source revisions, not the current Gemini deployment.</td></tr>
+<tr><td>Upstream discussion<br>October 7</td><td>Issue remains closed; PR remains merged; remaining-failure follow-up is present.</td><td>Discussion state checked at 14:14 UTC. Current unpatched Gemini retest pending.</td></tr>
+</tbody></table></div>
+</section>
+<section class="panel">
+<h2>A workaround, with a clear limit</h2>
+<p>The v1.2.0 userscript omits only empty legacy Deep Research citation widgets and recovers the existing queue after a successful application tick. It sends no data and stores no conversation content. It depends on internal frontend structures and can stop matching later builds.</p>
+<p><strong>This is a local compatibility workaround, not an official Google repair.</strong> The earlier version already required revision after Gemini changed internal identifiers.</p>
+<p><a class="action" href="https://github.com/COOLak/gemini-attachment-menu-incident/blob/main/workaround.md">Read the workaround and its limits</a></p>
+</section>
+<section class="panel" id="reports">
+<h2>Are other people seeing the same thing?</h2>
+<p>A reliable independent count has not yet been established. Empty menus, greyed-out buttons, failed uploads, and missing files are different symptoms. This repository will count distinct firsthand matching reports, not votes or search-result totals.</p>
+<p>Useful reports identify the web app and browser, whether the failure is limited to an existing conversation, and whether the menu opens empty. No private conversation contents are needed.</p>
+<p><a class="action" href="https://github.com/COOLak/gemini-attachment-menu-incident/issues/new?template=report.md">Report a matching symptom</a> · <a href="https://github.com/COOLak/gemini-attachment-menu-incident/blob/main/reports.md">Counting method</a></p>
+</section>
+<section class="panel">
+<h2>Follow the evidence</h2>
+<ul>
+<li><a href="https://github.com/angular/angular/issues/70728">Angular issue #70728</a> and <a href="https://github.com/angular/angular/pull/70730">PR #70730</a>.</li>
+<li><a href="https://github.com/COOLak/gemini-attachment-menu-incident/blob/main/timeline.md">Dated investigation timeline</a>.</li>
+<li><a href="https://github.com/COOLak/gemini-attachment-menu-incident/blob/main/repro/angular-merged70730-repro.mjs">Runnable scheduler reproduction</a> and <a href="evidence/angular-merged70730-results.jsonl">recorded observations</a>.</li>
+<li><a href="incident-state.json">Machine-readable status</a> and <a href="evidence/manifest.json">artifact hashes</a>.</li>
+</ul>
+</section>
+<footer><p>Independent technical investigation. Not affiliated with or an official notice from Google or Angular. Private conversation text, account identifiers, and support correspondence are excluded. All test claims retain their dates and scope.</p></footer>
+</main></body></html>

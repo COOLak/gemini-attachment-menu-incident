@@ -2,9 +2,9 @@
   "schema": "incident-state/v1",
   "incident": "Gemini empty attachment menu in an existing conversation",
   "updated": "2026-10-07",
-  "status": "historical_failure_documented_current_unpatched_status_unverified",
-  "current_unpatched_gemini_result": null,
-  "last_verified_web_workaround_test": "2026-09-17",
+  "status": "safari_web_app_failure_reproduced_chrome_firefox_work_unpatched",
+  "current_unpatched_gemini_result": "Safari standalone web app empty menu; Chrome and Firefox menu and unsent attachment work in same conversation",
+  "last_verified_web_workaround_test": "2026-10-07",
   "environment": "Gemini standalone Safari web app on macOS",
   "workaround": {
     "version": "1.2.0",
@@ -36,5 +36,6 @@
     "prevalence_estimate": null
   },
   "resolution_verified": false,
-  "private_material_published": false
+  "private_material_published": false,
+  "latest_browser_comparison": "evidence/browser-comparison-2026-10-07.json"
 }

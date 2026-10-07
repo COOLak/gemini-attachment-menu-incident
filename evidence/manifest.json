@@ -2,7 +2,7 @@
   "schema": "evidence-manifest/v1",
   "recorded_test_date": "2026-09-17",
   "publication_date": "2026-10-07",
-  "note": "Historical evidence. Not a current Gemini deployment test.",
+  "note": "Historical source evidence and October 7 UTC live browser observations are separately dated. Hashes identify artifacts, not independent replication.",
   "files": [
     {
       "path": "workaround/gemini-attachment-menu-fix.user.js",
@@ -18,6 +18,31 @@
       "path": "evidence/angular-merged70730-results.jsonl",
       "bytes": 2943,
       "sha256": "2e9519eb4c85dbca7e83292c6256b5c1341867c5fad507b48f7597b0043f045f"
+    },
+    {
+      "path": "evidence/browser-comparison-2026-10-07.json",
+      "bytes": 2014,
+      "sha256": "ab85749702b7e2582bb8db245d311f086ffb0e80663943faa141ac3febfd23e5",
+      "test_date_utc": "2026-10-07"
+    },
+    {
+      "path": "evidence/unpatched-empty-menu-cropped.png",
+      "bytes": 40611,
+      "sha256": "eabe77ca39eb407f72955b5637b30f65a12e0c4765744fe7c8450cc6a90929d3",
+      "test_date_utc": "2026-10-07"
+    },
+    {
+      "path": "evidence/patched-attachment-cropped.png",
+      "bytes": 68352,
+      "sha256": "5b1a5ed126a96d1b6c4c3b301e7eb94763b0abe2702fe86c3aae67bdf2a339f6",
+      "test_date_utc": "2026-10-07"
+    },
+    {
+      "path": "evidence/chrome-unpatched-attachment.png",
+      "bytes": 9223,
+      "sha256": "9aafdc84de7cb6885b0c0576f32c5cb02e7563fc865c6748a0313f5642eea1bd",
+      "test_date_utc": "2026-10-07"
     }
-  ]
+  ],
+  "latest_live_comparison_date_utc": "2026-10-07"
 }

@@ -8,7 +8,7 @@
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Gemini's empty attachment menu">
-<meta property="og:description" content="Historical failure reproduced. Local workaround available. Current unpatched status unverified. Read the evidence and upstream follow-up.">
+<meta property="og:description" content="Fresh Safari web-app failure reproduced; Chrome and Firefox worked without the patch. Read the dated comparison and its limits.">
 <link rel="stylesheet" href="site.css">
 </head>
 <body><main>
@@ -16,14 +16,14 @@
 <a href="#evidence">Evidence</a><a href="#mechanism">Technical finding</a><a href="#status">Current status</a><a href="#reports">Other reports</a><a href="https://github.com/COOLak/gemini-attachment-menu-incident">Repository</a>
 </nav>
 <header>
-<p class="kicker">Gemini web · public incident tracker · updated October 7, 2026</p>
+<p class="kicker">Gemini web · public incident tracker · updated October 7, 2026 UTC</p>
 <h1>An old citation crashed.<br>The attachment menu stopped loading.</h1>
 <p class="lede">In an existing Gemini conversation, the attachment menu opened as an empty shell. The September investigation traced the failure to a legacy Deep Research citation and a stalled deferred-work queue. A narrow local workaround restored attachments.</p>
-<div class="pills"><span class="pill status">Current unpatched status unverified</span><span class="pill">Historical failure reproduced</span><span class="pill">Local workaround v1.2.0</span></div>
+<div class="pills"><span class="pill status">Safari failure reproduced October 7 UTC</span><span class="pill">Historical failure reproduced</span><span class="pill">Local workaround v1.2.0</span></div>
 </header>
 <section class="panel warning" id="status">
 <h2>Has Google fixed it?</h2>
-<p><strong>We do not have a verified answer for the current build.</strong> The original Safari web-app environment still needs a fresh test with the workaround disabled before page load. The last recorded live comparison is September 17.</p>
+<p><strong>The original Safari web-app failure persists in the fresh October 7 UTC test.</strong> With the local userscript disabled before reload, the menu was empty. Restoring v1.2.0 restored menu actions and a harmless attachment. <strong>Chrome and Firefox worked without the patch in the same conversation.</strong></p><p>This is one account and one existing conversation. It does not establish a failure affecting every Safari user or every desktop browser. No fresh internal stack or deployment identifier was captured. <a href="https://github.com/COOLak/gemini-attachment-menu-incident/blob/main/browser-comparison.md">Full comparison and privacy-cropped evidence →</a></p>
 <p>Angular merged a related change and closed its issue, but a post-merge reproduction demonstrated remaining failure at the merge and both backports. That result does not establish what Gemini serves today.</p>
 <p><a href="https://github.com/angular/angular/issues/70728#issuecomment-5721025628">Read the post-merge follow-up</a> · <a href="https://github.com/COOLak/gemini-attachment-menu-incident/blob/main/resolution.md">Resolution criteria</a></p>
 </section>
@@ -50,7 +50,9 @@
 <tr><td>Safari web app<br>September 17</td><td>Empty menu without the revised workaround; menu and harmless unsent attachment worked with v1.2.0.</td><td>Historical result in the original affected conversation.</td></tr>
 <tr><td>Native Android app<br>September 17</td><td>The same conversation opened its attachment menu and Files picker.</td><td>Android success does not settle the web failure.</td></tr>
 <tr><td>Angular merge + backports<br>September 17</td><td>Fresh work stalled after a callback or application-tick exception in both scheduler modes.</td><td>Three pinned source revisions, not the current Gemini deployment.</td></tr>
-<tr><td>Upstream discussion<br>October 7</td><td>Issue remains closed; PR remains merged; remaining-failure follow-up is present.</td><td>Discussion state checked at 14:14 UTC. Current unpatched Gemini retest pending.</td></tr>
+<tr><td>Upstream discussion<br>October 7</td><td>Issue remains closed; PR remains merged; remaining-failure follow-up is present.</td><td>Discussion state checked at 14:14 UTC; separate from the later live comparison.</td></tr>
+<tr><td>Safari web app 27.0.1<br>October 7 UTC</td><td>Empty menu with script disabled before reload; menu and harmless attachment worked after v1.2.0 restoration.</td><td>Same original conversation; no fresh internal stack. Attachment removed unsent.</td></tr>
+<tr><td>Chrome 154 / Firefox 157<br>October 7 UTC</td><td>Both menu and harmless attachment worked with the script disabled before fresh load.</td><td>Same conversation and account. No all-browser failure claim. Test attachments removed unsent.</td></tr>
 </tbody></table></div>
 </section>
 <section class="panel">

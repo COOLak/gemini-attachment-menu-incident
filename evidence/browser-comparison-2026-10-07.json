@@ -1,0 +1,53 @@
+{
+  "date_utc": "2026-10-07",
+  "scope": "One account, same original existing conversation, macOS",
+  "versions": {
+    "Chrome": {
+      "CFBundleShortVersionString": "154.0.8037.98",
+      "CFBundleVersion": "8037.98"
+    },
+    "Firefox": {
+      "CFBundleShortVersionString": "157.0.1",
+      "CFBundleVersion": "15726.10.5"
+    },
+    "Safari": {
+      "CFBundleShortVersionString": "27.0.1",
+      "CFBundleVersion": "22625.1.29.11.28"
+    }
+  },
+  "method": "Disable only the v1.2.0 AdGuard compatibility userscript before fresh page load. Preserve other browser and protection settings. Observe menu; where available, attach harmless TXT file and remove it without sending.",
+  "results": [
+    {
+      "environment": "Safari standalone web app",
+      "patch": "off",
+      "menu": "empty; Upload files and Add from Drive unavailable",
+      "attachment": "not reachable through menu"
+    },
+    {
+      "environment": "Safari standalone web app",
+      "patch": "v1.2.0 on",
+      "menu": "Upload files and Add from Drive available",
+      "attachment": "harmless TXT loaded and removed unsent"
+    },
+    {
+      "environment": "Chrome",
+      "patch": "off",
+      "menu": "Upload files and Add from Drive available",
+      "attachment": "harmless TXT loaded and removed unsent"
+    },
+    {
+      "environment": "Firefox",
+      "patch": "off",
+      "menu": "Upload files and Add from Drive available",
+      "attachment": "harmless TXT loaded and removed unsent"
+    }
+  ],
+  "restoration": "Userscript restored to enabled; test attachments removed unsent; temporary comparison tabs closed.",
+  "limits": [
+    "One account and one existing conversation; no population-wide inference",
+    "AdGuard setting disabled before full fresh loads; no fresh runtime stack/build fingerprint collected",
+    "No prompt submitted; upload proof ends at completed attachment chip",
+    "Safari result is standalone Safari web app; normal Safari tab was not tested"
+  ],
+  "official_resolution_verified": false
+}

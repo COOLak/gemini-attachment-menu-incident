@@ -1,0 +1,46 @@
+{
+  "schema": "public-report-ledger/v1",
+  "audited_date_utc": "2026-10-07",
+  "counts": {
+    "detailed_independent_symptom_matches": 1,
+    "terse_corroborating_replies": 1,
+    "distinct_matching_threads": 1,
+    "independent_same_root_cause_confirmations": 0,
+    "independent_safari_confirmations": 0,
+    "affected_population": null
+  },
+  "method": "Public accounts, not verified real-world identities. Own investigation excluded. Browser and root cause unknown for both entries.",
+  "sources": [
+    {
+      "id": "R1",
+      "url": "https://www.reddit.com/r/GeminiAI/comments/1vxnsfu/i_cant_add_anything_on_this_chat/",
+      "public_account": "ddg1208_gaming",
+      "created_utc": "2026-08-25T02:53:43Z",
+      "created_epoch": 1787626423,
+      "category": "detailed_close_symptom_match",
+      "summary": "Plus shows nothing only in this conversation; other conversations work.",
+      "browser": null,
+      "os": null,
+      "root_cause": null
+    },
+    {
+      "id": "R2",
+      "url": "https://www.reddit.com/r/GeminiAI/comments/1vxnsfu/i_cant_add_anything_on_this_chat/p5rotmw/",
+      "public_account": "GWGSYT",
+      "created_utc": "2026-08-25T09:25:13Z",
+      "created_epoch": 1787649913,
+      "category": "terse_corroboration",
+      "summary": "Says same for me too; no additional characterization.",
+      "thread": "R1",
+      "browser": null,
+      "root_cause": null
+    }
+  ],
+  "timestamp_verification_source": "https://www.reddit.com/r/GeminiAI/comments/1vxnsfu/i_cant_add_anything_on_this_chat/.json",
+  "limitations": [
+    "Search results are not exhaustive.",
+    "No private or deleted reports counted.",
+    "No inference of Safari or identical root cause from the independent report.",
+    "Votes, views, duplicates and own upstream posts are excluded."
+  ]
+}

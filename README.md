@@ -28,7 +28,7 @@ The application failure and the independently reproducible Angular scheduler pro
 | What worked? | A narrow local citation guard plus queue recovery restored the menu and a harmless test attachment in September. Android also opened the menu for that same conversation. |
 | Was there an upstream response? | [Angular #70730](https://github.com/angular/angular/pull/70730) merged. A [post-merge follow-up](https://github.com/angular/angular/issues/70728#issuecomment-5721025628) demonstrates remaining failure at the merge and both backports. |
 | Is it fixed today? | The original Safari web-app failure persists in the October 7 UTC retest. Chrome and Firefox work without the patch in the same conversation. See the [comparison and limits](browser-comparison.md). |
-| How many people are affected? | One investigated case. The number of independent matching reports and the affected population are not established. |
+| How many people are affected? | [One detailed independent symptom report and one terse reply](reports.md) were verified in one public thread; browser and root cause are unknown. The affected population is not established. |
 
 ## Evidence available here
 

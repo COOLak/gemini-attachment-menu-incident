@@ -42,6 +42,12 @@
       "bytes": 9223,
       "sha256": "9aafdc84de7cb6885b0c0576f32c5cb02e7563fc865c6748a0313f5642eea1bd",
       "test_date_utc": "2026-10-07"
+    },
+    {
+      "path": "evidence/report-ledger-2026-10-07.json",
+      "bytes": 1801,
+      "sha256": "20320f0891d4c492a154a2472dadb6221cc6fb33223f680fc653eebee06e5fbd",
+      "audit_date_utc": "2026-10-07"
     }
   ],
   "latest_live_comparison_date_utc": "2026-10-07"

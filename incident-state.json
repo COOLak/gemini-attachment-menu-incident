@@ -21,7 +21,8 @@
     "pr_merged": true,
     "pr_head": "d8645885bb5167df04732333774a8610f95550e2",
     "merge_commit": "9486df5e26388e975dfc222902505c2e864636ef",
-    "remaining_failure_followup": "https://github.com/angular/angular/issues/70728#issuecomment-5721025628"
+    "remaining_failure_followup": "https://github.com/angular/angular/issues/70728#issuecomment-5721025628",
+    "latest_browser_followup": "https://github.com/angular/angular/issues/70728#issuecomment-6041009830"
   },
   "source_reproduction": {
     "date": "2026-09-17",
@@ -32,8 +33,14 @@
   },
   "reported_population": {
     "investigated_cases": 1,
-    "independent_matching_report_count": null,
-    "prevalence_estimate": null
+    "independent_matching_report_count": 1,
+    "prevalence_estimate": null,
+    "terse_corroborating_replies": 1,
+    "distinct_matching_threads": 1,
+    "independent_same_root_cause_confirmations": 0,
+    "independent_safari_confirmations": 0,
+    "audit_date_utc": "2026-10-07",
+    "source_ledger": "evidence/report-ledger-2026-10-07.json"
   },
   "resolution_verified": false,
   "private_material_published": false,

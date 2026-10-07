@@ -15,3 +15,7 @@ Dates are investigation dates. Private account, conversation, and support-case i
 | October 7 | Upstream issue and PR checked: issue remains closed, PR remains merged, post-merge follow-up remains unanswered in the checked discussion. | GitHub readback at 14:14 UTC. No current Gemini unpatched result is claimed. |
 | October 7 | Dedicated public tracker prepared from the retained evidence. | Current unpatched test pending; independent matching-report count not established. |
 | October 7 UTC | Fresh original-conversation comparison: Safari web app failed with script disabled before reload; restoring v1.2.0 restored menu and a harmless attachment. Chrome and Firefox worked without the script. | [Detailed comparison](browser-comparison.md). One account/conversation; no fresh internal stack or deployment ID. Attachments removed unsent and patch restored. |
+
+## October 7, 2026 UTC — public report audit
+
+One detailed independent symptom match and one terse corroborating reply were verified in a single August 25 Reddit thread. Their browser and technical cause are unknown. Generic upload problems and this investigation’s own upstream posts are excluded. See [the report audit](reports.md).

@@ -1,7 +1,7 @@
 {
   "schema": "incident-state/v1",
   "incident": "Gemini empty attachment menu in an existing conversation",
-  "updated": "2026-10-07",
+  "updated": "2026-10-19",
   "status": "safari_web_app_failure_reproduced_chrome_firefox_work_unpatched",
   "current_unpatched_gemini_result": "Safari standalone web app empty menu; Chrome and Firefox menu and unsent attachment work in same conversation",
   "last_verified_web_workaround_test": "2026-10-07",
@@ -44,5 +44,16 @@
   },
   "resolution_verified": false,
   "private_material_published": false,
-  "latest_browser_comparison": "evidence/browser-comparison-2026-10-07.json"
+  "latest_browser_comparison": "evidence/browser-comparison-2026-10-07.json",
+  "separate_chat_loading_observation": {
+    "date_utc": "2026-10-19",
+    "status": "current_recovery_verified_cause_unresolved",
+    "userscript_off_failure_reproduced": true,
+    "http3_filtering_restored": true,
+    "causal_http3_dependency_established": false,
+    "durable_repair_verified": false,
+    "attachment_resolution_inferred": false,
+    "report": "chat-loading-2026-10-19.md",
+    "vendor_comment": "https://github.com/AdguardTeam/AdguardForMac/issues/1700#issuecomment-6267128801"
+  }
 }

@@ -16,7 +16,7 @@
 <a href="#evidence">Evidence</a><a href="#mechanism">Technical finding</a><a href="#status">Current status</a><a href="#reports">Other reports</a><a href="https://github.com/COOLak/gemini-attachment-menu-incident">Repository</a>
 </nav>
 <header>
-<p class="kicker">Gemini web · public incident tracker · updated October 7, 2026 UTC</p>
+<p class="kicker">Gemini web · public incident tracker · updated October 19, 2026 UTC</p>
 <h1>An old citation crashed.<br>The attachment menu stopped loading.</h1>
 <p class="lede">In an existing Gemini conversation, the attachment menu opened as an empty shell. The September investigation traced the failure to a legacy Deep Research citation and a stalled deferred-work queue. A narrow local workaround restored attachments.</p>
 <div class="pills"><span class="pill status">Safari failure reproduced October 7 UTC</span><span class="pill">Historical failure reproduced</span><span class="pill">Local workaround v1.2.0</span></div>
@@ -26,6 +26,11 @@
 <p><strong>The original Safari web-app failure persists in the fresh October 7 UTC test.</strong> With the local userscript disabled before reload, the menu was empty. Restoring v1.2.0 restored menu actions and a harmless attachment. <strong>Chrome and Firefox worked without the patch in the same conversation.</strong></p><p>This is one account and one existing conversation. It does not establish a failure affecting every Safari user or every desktop browser. No fresh internal stack or deployment identifier was captured. <a href="https://github.com/COOLak/gemini-attachment-menu-incident/blob/main/browser-comparison.md">Full comparison and privacy-cropped evidence →</a></p>
 <p>Angular merged a related change and closed its issue, but a post-merge reproduction demonstrated remaining failure at the merge and both backports. That result does not establish what Gemini serves today.</p>
 <p><a href="https://github.com/angular/angular/issues/70728#issuecomment-5721025628">Read the post-merge follow-up</a> · <a href="https://github.com/COOLak/gemini-attachment-menu-incident/blob/main/resolution.md">Resolution criteria</a></p>
+</section>
+<section class="panel">
+<h2>October 19: separate chat-loading observation</h2>
+<p>The original Safari app currently loads its recent-chat list and an existing conversation after a temporary HTTP/3 filtering comparison. Filtering is restored ON. Both OFF and restored-ON checks passed in the final cycle, so the cause and durability remain unresolved. This does not resolve the attachment-menu defect or change the independent report counts.</p>
+<p><a href="https://github.com/COOLak/gemini-attachment-menu-incident/blob/main/chat-loading-2026-10-19.md">Dated observations, vendor follow-up and limits →</a></p>
 </section>
 <section aria-label="Recorded evidence at a glance" class="grid" id="evidence">
 <div class="card"><h3>Workaround checks</h3><div class="metric">25 passed</div><p>Focused offline checks recorded September 17, plus fresh loads in the affected conversation.</p></div>

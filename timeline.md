@@ -19,3 +19,7 @@ Dates are investigation dates. Private account, conversation, and support-case i
 ## October 7, 2026 UTC — public report audit
 
 One detailed independent symptom match and one terse corroborating reply were verified in a single August 25 Reddit thread. Their browser and technical cause are unknown. Generic upload problems and this investigation’s own upstream posts are excluded. See [the report audit](reports.md).
+
+## October 19, 2026 UTC — separate chat-loading failure
+
+A network transport failure was reproduced with the userscript execution marker absent. A temporary HTTP/3 filtering comparison ended with successful fresh loads under both OFF and restored-ON conditions. The app currently loads chats, but root cause and durable repair remain unproved. This does not establish attachment-menu resolution or change independent report counts. See [the dated observations](chat-loading-2026-10-19.md).

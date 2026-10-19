@@ -6,6 +6,10 @@ This is a public evidence tracker for a Gemini web failure: opening the attachme
 
 The application failure and the independently reproducible Angular scheduler problem are tracked separately. An Angular merge does not establish which code Gemini serves or whether the original conversation now works.
 
+## October 19: separate chat-loading observation
+
+The app currently loads its recent-chat list and an existing conversation after a temporary HTTP/3 filtering comparison, with the original filtering setting restored ON. The cause remains unresolved; this does not resolve the attachment-menu defect. [Dated observations and limits](chat-loading-2026-10-19.md).
+
 ## Start here
 
 - **[Public incident page](https://coolak.github.io/gemini-attachment-menu-incident/)**
